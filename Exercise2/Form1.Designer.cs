@@ -36,7 +36,7 @@ namespace Exercise2
                     switch ((int)m.WParam)
                     {
                         case DBT_DEVICEARRIVAL:
-                            Process.Start("mspaint.exe");
+                            Process.Start(new ProcessStartInfo { FileName = @"mspaint.exe", UseShellExecute = true });
                             break;
 
                         case DBT_DEVICEREMOVECOMPLETE:
